@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Місто Кропивницький</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(180deg, #fefefe, #f0f8ff);
+      color: #222;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #ffb703, #fb8500);
+      color: white;
+      text-align: center;
+      padding: 40px 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.8em;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+    }
+    nav {
+      background: #023e8a;
+      padding: 12px;
+      text-align: center;
+    }
+    nav a {
+      color: #fefefe;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffb703;
+    }
+    .container {
+      padding: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      color: #fb8500;
+      margin-top: 40px;
+      border-bottom: 3px solid #ffb703;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+    footer {
+      text-align: center;
+      background: #023e8a;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+    }
+    /* Лайтбокс */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    .lightbox:target {
+      display: flex;
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Кропивницький</h1>
+    <p>Сучасне місто з історією та красою</p>
+  </header>
+
+  <nav>
+    <a href="#history">Історія</a>
+    <a href="#places">Цікаві місця</a>
+    <a href="#gallery">Галерея</a>
+  </nav>
+
+  <div class="container">
+    <section id="history">
+      <h2>Історія міста</h2>
+      <p>
+        Кропивницький — обласний центр України, заснований у 1754 році як фортеця. 
+        Сучасна назва на честь видатного театрального діяча Марка Кропивницького. 
+        Місто відоме своїм театральним минулим і архітектурною спадщиною.
+      </p>
+    </section>
+
+    <section id="places">
+      <h2>Цікаві місця</h2>
+      <ul>
+        <li>Театр імені Марка Кропивницького</li>
+        <li>Ковалівський парк</li>
+        <li>Площа Героїв Майдану</li>
+        <li>Арт-об’єкти та старовинні будівлі центру міста</li>
+      </ul>
+    </section>
+
+    <section id="gallery">
+      <h2>Галерея</h2>
+      <div class="gallery">
+        <a href="#img1"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Kropyvnytskyi_-_Drama_Theatre.jpg" alt="Театр Кропивницького"></a>
+        <a href="#img2"><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Kropyvnytskyi_central_square.jpg" alt="Центральна площа"></a>
+        <a href="#img3"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Kropyvnytskyi_Park.jpg" alt="Ковалівський парк"></a>
+        <a href="#img4"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Kropyvnytskyi_railway_station.jpg" alt="Залізничний вокзал"></a>
+        <a href="#img5"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Kropyvnytskyi_old_buildings.jpg" alt="Архітектура міста"></a>
+        <a href="#img6"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Kropyvnytskyi_street.jpg" alt="Вулиці Кропивницького"></a>
+        <a href="#img7"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Kropyvnytskyi_Theatre_Square.jpg" alt="Театральна площа"></a>
+        <a href="#img8"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Kropyvnytskyi_sunset.jpg" alt="Захід сонця над містом"></a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Кропивницький. Усі права захищені.</p>
+  </footer>
+
+  <!-- Лайтбокс -->
+  <div id="img1" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Kropyvnytskyi_-_Drama_Theatre.jpg"></div>
+  <div id="img2" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Kropyvnytskyi_central_square.jpg"></div>
+  <div id="img3" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Kropyvnytskyi_Park.jpg"></div>
+  <div id="img4" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Kropyvnytskyi_railway_station.jpg"></div>
+  <div id="img5" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Kropyvnytskyi_old_buildings.jpg"></div>
+  <div id="img6" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Kropyvnytskyi_street.jpg"></div>
+  <div id="img7" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Kropyvnytskyi_Theatre_Square.jpg"></div>
+  <div id="img8" class="lightbox"><a href="#" class="close">&times;</a><img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Kropyvnytskyi_sunset.jpg"></div>
+
+</body>
+</html>
